@@ -3,154 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modul Lengkap Broadcasting - SMK BP</title>
+    <title>Master Modul Broadcasting - SMK BP</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-        .tab-btn.active { background-color: white; color: #1e40af; border-bottom: 4px solid #facc15; opacity: 1; }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
+        .glass-header { background: rgba(30, 58, 138, 0.95); backdrop-filter: blur(10px); }
+        .content-card { background: white; border-radius: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); }
+        .accent-line { height: 4px; width: 50px; background: #3b82f6; border-radius: 2px; margin-bottom: 1.5rem; }
+        .instruction-box { border-left: 4px solid #3b82f6; background: #eff6ff; padding: 1.5rem; border-radius: 0 1rem 1rem 0; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="text-slate-800 antialiased">
 
-    <header class="bg-blue-900 text-white pt-12 pb-20 px-6 text-center shadow-inner">
-        <h1 class="text-3xl md:text-5xl font-bold mb-2">MODUL UTUH PRODUKTIF</h1>
-        <p class="text-lg opacity-80 uppercase tracking-widest">Public Speaking & News Scripting</p>
-        
-        <div class="flex flex-wrap justify-center gap-2 mt-10">
-            <button onclick="openTab(event, 'tab1')" class="tab-btn active px-5 py-2 rounded-t-lg transition font-bold text-sm">PUBLIC SPEAKING</button>
-            <button onclick="openTab(event, 'tab2')" class="tab-btn px-5 py-2 rounded-t-lg opacity-70 transition font-bold text-sm">SENAM MUKA</button>
-            <button onclick="openTab(event, 'tab3')" class="tab-btn px-5 py-2 rounded-t-lg opacity-70 transition font-bold text-sm">NASKAH BERITA</button>
-            <button onclick="openTab(event, 'tab4')" class="tab-btn px-5 py-2 rounded-t-lg opacity-70 transition font-bold text-sm">JENIS & LKS</button>
+    <header class="glass-header text-white py-20 px-6 text-center shadow-2xl">
+        <div class="max-w-4xl mx-auto">
+            <span class="bg-blue-500 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-widest">Kurikulum SMK Merdeka</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6 tracking-tight">Broadcasting & Perfilman</h1>
+            <p class="text-lg md:text-xl text-blue-100 font-light max-w-2xl mx-auto leading-relaxed">
+                Materi Terpadu: Public Speaking, Olah Vokal, dan Teknik Penulisan Naskah Berita Profesional.
+            </p>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto -mt-10 px-4 pb-20">
+    <main class="max-w-5xl mx-auto -mt-10 px-6 pb-24 space-y-16">
 
-        <div id="tab1" class="tab-content active bg-white p-8 rounded-2xl shadow-xl border-t-8 border-blue-600">
-            <h2 class="text-2xl font-bold text-blue-800 mb-6 underline">I. PENDAHULUAN & PILAR UTAMA</h2>
-            <p class="mb-6 leading-relaxed">Di dunia penyiaran, <strong>Public Speaking</strong> bukan sekadar berani bicara, melainkan seni menyampaikan pesan secara profesional baik di depan kamera (<em>on-cam</em>) maupun di belakang mikrofon (<em>voice over/radio</em>). Tujuannya adalah membangun koneksi dengan audiens.</p>
+        <section class="content-card p-8 md:p-12 border-t-8 border-blue-600">
+            <div class="accent-line"></div>
+            <h2 class="text-3xl font-extrabold mb-8 flex items-center"><i class="fas fa-broadcast-tower mr-4 text-blue-600"></i> I. PUBLIC SPEAKING DALAM BROADCASTING</h2>
             
-            <h3 class="font-bold text-lg mb-4 text-blue-700">Pilar Utama (3V):</h3>
-            <ul class="space-y-4 mb-8">
-                <li class="bg-blue-50 p-4 rounded-lg"><strong>1. Visual (Penampilan):</strong> Body Language tegak namun rileks. Eye Contact fokus ke lensa (lensa adalah teman). Ekspresi wajah sesuai konten (tersenyum/serius).</li>
-                <li class="bg-blue-50 p-4 rounded-lg"><strong>2. Vocal (Suara):</strong> Fokus pada kejernihan suara, intonasi (nada) agar tidak monoton, serta Power & Speed yang stabil.</li>
-                <li class="bg-blue-50 p-4 rounded-lg"><strong>3. Verbal (Kata-kata):</strong> Pemilihan diksi yang komunikatif dan sesuai target audiens.</li>
-            </ul>
-
-            <h3 class="font-bold text-lg mb-4 text-blue-700">Teknik Olah Vokal:</h3>
-            <ul class="list-disc ml-6 space-y-2 mb-8">
-                <li><strong>Pernapasan Diafragma:</strong> Menggunakan otot perut agar suara bertenaga dan tidak cepat lelah.</li>
-                <li><strong>Artikulasi & Enunsiasi:</strong> Kejelasan pengucapan konsonan dan vokal (A-I-U-E-O).</li>
-                <li><strong>Smiling Voice:</strong> Berbicara sambil tersenyum tipis agar suara ramah dan "renyah".</li>
-                <li><strong>Ad-Libbing:</strong> Kemampuan improvisasi tanpa naskah menggunakan metode <em>Keywords</em>.</li>
-            </ul>
-
-            <h3 class="font-bold text-lg mb-4 text-red-600">Mengatasi Stage Fright (Gugup):</h3>
-            <p>Lakukan pemanasan senam muka, kuasai materi (pahami poinnya, bukan hafal teks), dan lakukan visualisasi positif sebelum mulai.</p>
-        </div>
-
-        <div id="tab2" class="tab-content bg-white p-8 rounded-2xl shadow-xl border-t-8 border-yellow-500">
-            <h2 class="text-2xl font-bold text-yellow-800 mb-6 underline">II. TEKNIK SENAM MUKA (FACE EXERCISE)</h2>
-            <div class="space-y-6">
-                <div class="border-b pb-4">
-                    <h4 class="font-bold text-lg">1. Gerakan "A-I-U-E-O" Maksimal</h4>
-                    <p>Ucapkan vokal dengan gerakan mulut yang dilebih-lebihkan: A (3 jari), I (tarik sudut bibir), U (mencucu kuat), E (meringis bertenaga), O (oval sempurna).</p>
-                </div>
-                <div class="border-b pb-4">
-                    <h4 class="font-bold text-lg">2. The Lion Face (Muka Singa)</h4>
-                    <p>Tarik napas, buka mulut selebar mungkin, julurkan lidah sepanjang mungkin ke arah dagu, melotot ke atas. Tahan 5 detik lalu rileks.</p>
-                </div>
-                <div class="border-b pb-4">
-                    <h4 class="font-bold text-lg">3. Lip Trills (Bibir Bergetar)</h4>
-                    <p>Tiupkan udara melalui bibir hingga bergetar cepat ("Brrrrr"). Sangat efektif menghilangkan kaku pada bibir.</p>
-                </div>
-                <div class="border-b pb-4">
-                    <h4 class="font-bold text-lg">4. Pemanasan Lidah & Rahang</h4>
-                    <p>Putar lidah searah jarum jam di dalam mulut, lakukan <em>tongue clicking</em>, dan pijat lembut area rahang (otot masseter) agar rileks.</p>
+            <div class="prose max-w-none text-slate-600 space-y-6">
+                <p class="text-lg">Bukan sekadar bicara, <span class="font-bold text-blue-700">Public Speaking</span> adalah seni menyampaikan pesan kepada audiens dengan tujuan tertentu (memberi informasi, menghibur, atau membujuk). Di dunia penyiaran, audiens Anda bisa jadi ribuan orang di balik layar kaca atau pendengar radio.</p>
+                
+                <h3 class="text-xl font-bold text-slate-800 mt-10">Pilar Utama Public Speaking (Konsep 3V)</h3>
+                <div class="grid md:grid-cols-3 gap-8 mt-6">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <i class="fas fa-eye text-2xl text-blue-500 mb-4"></i>
+                        <h4 class="font-bold mb-3">1. Visual (Penampilan)</h4>
+                        <ul class="text-sm space-y-2 list-none">
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> <strong>Body Language:</strong> Berdiri tegak namun rileks.</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> <strong>Eye Contact:</strong> Jika di depan kamera, mata harus fokus ke lensa (seolah menatap mata penonton).</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> <strong>Ekspresi Wajah:</strong> Sesuaikan dengan topik (tersenyum untuk berita ringan, serius untuk berita duka).</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <i class="fas fa-volume-up text-2xl text-blue-500 mb-4"></i>
+                        <h4 class="font-bold mb-3">2. Vocal (Suara)</h4>
+                        <ul class="text-sm space-y-2">
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> <strong>Artikulasi:</strong> Kejelasan pengucapan kata (A-I-U-E-O).</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> <strong>Intonasi:</strong> Tinggi rendah nada agar tidak membosankan (flat).</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> <strong>Power & Speed:</strong> Kekuatan suara dan kecepatan bicara yang stabil.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <i class="fas fa-comment-dots text-2xl text-blue-500 mb-4"></i>
+                        <h4 class="font-bold mb-3">3. Verbal (Kata-kata)</h4>
+                        <ul class="text-sm space-y-2">
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Pemilihan kata yang mudah dimengerti (komunikatif).</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Gunakan teknik storytelling agar audiens merasa terlibat.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="tab3" class="tab-content bg-white p-8 rounded-2xl shadow-xl border-t-8 border-green-600">
-            <h2 class="text-2xl font-bold text-green-800 mb-6 underline">III. NEWS SCRIPTING (TEKNIS INDUSTRI)</h2>
-            <p class="mb-4">Prinsip utama: <strong>ELF (Easy, Logical, Functional)</strong>. Tulisan harus "enak didengar".</p>
+        <section class="content-card p-8 md:p-12 border-t-8 border-amber-500">
+            <div class="accent-line bg-amber-500"></div>
+            <h2 class="text-3xl font-extrabold mb-8 flex items-center"><i class="fas fa-vocal-soft mr-4 text-amber-500"></i> II. OLAH VOKAL & SENAM MUKA</h2>
             
-            <div class="grid md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-gray-100 p-4 rounded-lg">
-                    <h4 class="font-bold mb-2 uppercase text-xs text-gray-500">Tanda Baca Khusus:</h4>
-                    <ul class="text-sm space-y-1">
-                        <li><strong>/</strong> : Jeda pendek (koma)</li>
-                        <li><strong>//</strong> : Jeda panjang (titik)</li>
-                        <li><strong>///</strong> : Akhir naskah berita</li>
-                        <li>Angka ditulis huruf: <strong>Rp 1.000 (Seribu Rupiah)</strong></li>
-                    </ul>
+            <div class="space-y-10">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold border-b pb-2">Elemen Olah Vokal Profesional</h3>
+                        <ul class="space-y-4 text-slate-600">
+                            <li><strong>Pernapasan Diafragma:</strong> Teknik bernapas menggunakan otot perut agar suara lebih bertenaga (power), stabil, dan tidak cepat lelah atau terputus-putus saat membaca kalimat panjang.</li>
+                            <li><strong>Phrasing (Pemenggalan Kalimat):</strong> Mengetahui di mana harus mengambil jeda agar makna kalimat tidak berubah.</li>
+                            <li><strong>Smiling Voice:</strong> Teknik berbicara sambil tersenyum tipis. Ini membuat suara terdengar lebih ramah dan "renyah" di telinga pendengar.</li>
+                            <li><strong>Ad-Libbing (Improvisasi):</strong> Kemampuan bicara tanpa naskah. Jangan menghafal kata per kata, tapi kuasai poin-poinnya (key points).</li>
+                        </ul>
+                    </div>
+                    <div class="bg-amber-50 p-8 rounded-3xl border border-amber-100">
+                        <h3 class="text-xl font-bold mb-6 text-amber-900">Praktik Senam Muka (Face Exercise)</h3>
+                        <div class="space-y-6 text-sm text-amber-900">
+                            <div>
+                                <span class="font-bold uppercase block mb-1">1. Gerakan A-I-U-E-O Maksimal</span>
+                                <p>Ucapkan huruf vokal dengan gerakan mulut yang dilebih-lebihkan. Buka mulut lebar (3 jari) untuk A, dan tarik bibir sekuatnya untuk I.</p>
+                            </div>
+                            <div>
+                                <span class="font-bold uppercase block mb-1">2. The Lion Face (Muka Singa)</span>
+                                <p>Tarik napas, buka mulut lebar, julurkan lidah sepanjang mungkin ke arah dagu, dan melotot ke atas. Tahan 5 detik.</p>
+                            </div>
+                            <div>
+                                <span class="font-bold uppercase block mb-1">3. Lip Trills (Bibir Bergetar)</span>
+                                <p>Tiupkan udara melalui bibir hingga bergetar cepat ("Brrrrr") untuk menghilangkan kaku pada bibir.</p>
+                            </div>
+                            <div>
+                                <span class="font-bold uppercase block mb-1">4. Pemanasan Lidah & Rahang</span>
+                                <p>Putar lidah searah jarum jam 10x di dalam mulut. Pijat lembut area rahang (otot masseter) agar rileks.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-gray-100 p-4 rounded-lg">
-                    <h4 class="font-bold mb-2 uppercase text-xs text-gray-500">Istilah Dapur Berita:</h4>
-                    <ul class="text-sm space-y-1">
-                        <li><strong>VO:</strong> Voice Over (Baca teks saat video putar)</li>
-                        <li><strong>SOT:</strong> Sound On Tape (Wawancara)</li>
-                        <li><strong>PKG:</strong> Package (Berita utuh yang sudah diedit)</li>
-                        <li><strong>ANCHOR:</strong> Presenter di studio</li>
-                    </ul>
+
+                <div class="instruction-box">
+                    <h4 class="font-bold text-blue-900 mb-2 underline italic">Tips Mengatasi Gugup (Stage Fright)</h4>
+                    <p class="text-slate-600 italic">"Gugup itu manusiawi. Lakukan teknik pernapasan diafragma (hirup-tahan-buang), kuasai materi secara mendalam, dan lakukan visualisasi positif sebelum mulai tampil."</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card p-8 md:p-12 border-t-8 border-emerald-600">
+            <div class="accent-line bg-emerald-600"></div>
+            <h2 class="text-3xl font-extrabold mb-8 flex items-center text-emerald-900"><i class="fas fa-file-signature mr-4"></i> III. TEKNIK PENULISAN NASKAH BERITA</h2>
+            
+            <div class="prose max-w-none text-slate-600 space-y-6">
+                <p>Naskah berita broadcasting ditulis untuk <span class="font-bold italic text-emerald-700">telinga, bukan untuk mata</span>. Mengikuti prinsip <span class="font-bold">ELF</span> (Easy, Logical, Functional).</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mt-10">
+                    <div class="bg-emerald-50 p-6 rounded-2xl border border-emerald-100">
+                        <h4 class="font-bold mb-4 text-emerald-800 tracking-wider">STANDAR TANDA BACA INDUSTRI</h4>
+                        <ul class="text-sm space-y-2">
+                            <li><strong>( / )</strong> : Jeda pendek (setara koma)</li>
+                            <li><strong>( // )</strong> : Jeda panjang (setara titik)</li>
+                            <li><strong>( /// )</strong> : Akhir naskah berita</li>
+                            <li><strong>Angka:</strong> Rp 1.500.000 ditulis "Satu Juta Lima Ratus Ribu Rupiah"</li>
+                            <li><strong>Ejaan:</strong> Charles Leclerc ditulis (Charles Lekler)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-800 text-white p-6 rounded-2xl">
+                        <h4 class="font-bold mb-4 text-emerald-400">ISTILAH TEKNIS "DAPUR" BERITA</h4>
+                        <ul class="text-sm space-y-2 opacity-90">
+                            <li><strong>ANCHOR:</strong> Presenter utama di studio.</li>
+                            <li><strong>VO (Voice Over):</strong> Suara latar saat video diputar.</li>
+                            <li><strong>SOT (Sound On Tape):</strong> Potongan wawancara narasumber.</li>
+                            <li><strong>PKG (Package):</strong> Berita utuh yang sudah diedit.</li>
+                            <li><strong>Lead:</strong> Teras berita pembuka yang menentukan (3-5 detik).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-bold text-slate-800 mt-12 mb-4">Contoh Format Split Page (Kolom Berita)</h3>
+                <div class="overflow-x-auto border-2 border-emerald-100 rounded-3xl">
+                    <table class="w-full text-left">
+                        <thead class="bg-emerald-600 text-white">
+                            <tr>
+                                <th class="p-5 border-r w-1/3">VISUAL (GAMBAR/VIDEO)</th>
+                                <th class="p-5">AUDIO (TEKS NARASI)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y text-sm">
+                            <tr class="bg-white">
+                                <td class="p-5 border-r font-bold align-top">ANCHOR ON CAM</td>
+                                <td class="p-5 leading-relaxed tracking-wider">PEMIRSA / TINGGINYA CURAH HUJAN DI JAWA TENGAH // MEMBUAT SEJUMLAH TITIK DI KOTA PEKALONGAN TERGENANG BANJIR / PADA RABU PAGI ///</td>
+                            </tr>
+                            <tr class="bg-emerald-50/50">
+                                <td class="p-5 border-r font-bold align-top italic text-emerald-700 underline">ROLL VIDEO (VO)</td>
+                                <td class="p-5 leading-relaxed tracking-wider">SALAH SATU TITIK TERPARAH BERADA DI KECAMATAN PEKALONGAN BARAT / DENGAN KETINGGIAN AIR MENCAPAI LIMA PULUH SENTIMETER // AKIBATNYA / AKTIVITAS WARGA LUMPUH TOTAL ///</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card p-8 md:p-12 border-t-8 border-rose-600">
+            <div class="accent-line bg-rose-600"></div>
+            <h2 class="text-3xl font-extrabold mb-8 flex items-center text-rose-900"><i class="fas fa-tags mr-4"></i> IV. KLASIFIKASI BERITA & PRAKTIK</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                <div class="p-5 rounded-2xl border-2 border-rose-100 bg-white shadow-sm">
+                    <h4 class="font-extrabold text-rose-600 mb-2">Hard News</h4>
+                    <p class="text-xs text-slate-500">Mendesak, cepat basi, struktur Piramida Terbalik. Penting segera diketahui publik.</p>
+                </div>
+                <div class="p-5 rounded-2xl border-2 border-rose-100 bg-white shadow-sm">
+                    <h4 class="font-extrabold text-rose-600 mb-2">Soft News</h4>
+                    <p class="text-xs text-slate-500">Menghibur, menginspirasi, santai. Fokus ke sisi kemanusiaan (Human Interest).</p>
+                </div>
+                <div class="p-5 rounded-2xl border-2 border-rose-100 bg-white shadow-sm">
+                    <h4 class="font-extrabold text-rose-600 mb-2">Investigative</h4>
+                    <p class="text-xs text-slate-500">Penelitian mendalam untuk mengungkap fakta tersembunyi atau pelanggaran berat.</p>
+                </div>
+                <div class="p-5 rounded-2xl border-2 border-rose-100 bg-white shadow-sm">
+                    <h4 class="font-extrabold text-rose-600 mb-2">Feature</h4>
+                    <p class="text-xs text-slate-500">Gaya storytelling kreatif untuk menyentuh emosi. Durasi biasanya lebih panjang.</p>
                 </div>
             </div>
 
-            <h4 class="font-bold mb-4">Contoh Format Kolom (Split Page):</h4>
-            <div class="border rounded-lg overflow-hidden">
-                <table class="w-full text-sm">
-                    <thead class="bg-green-700 text-white">
-                        <tr><th class="p-3 border-r">VISUAL (Gambar/Video)</th><th class="p-3">AUDIO (Teks Narasi)</th></tr>
-                    </thead>
-                    <tbody class="divide-y">
-                        <tr>
-                            <td class="p-3 border-r font-bold">ANCHOR ON CAM</td>
-                            <td class="p-3">PEMIRSA / TINGGINYA CURAH HUJAN DI PEKALONGAN // MEMBUAT SEJUMLAH TITIK TERGENANG BANJIR ///</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 border-r font-bold italic">ROLL VIDEO (VO)</td>
-                            <td class="p-3 text-blue-700 font-medium font-serif">KETINGGIAN AIR MENCAPAI LIMA PULUH SENTIMETER // AKIBATNYA / AKTIVITAS WARGA LUMPUH TOTAL ///</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="bg-rose-900 text-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10">
+                    <i class="fas fa-tasks text-9xl"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-8 text-center text-rose-100 tracking-tighter uppercase">Lembar Kerja Siswa (LKS) - Praktik Mandiri</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-rose-700">
+                                <th class="py-4 px-2 text-left text-rose-300 uppercase tracking-widest font-bold">Aktivitas</th>
+                                <th class="py-4 px-2 text-left text-rose-300 uppercase tracking-widest font-bold">Instruksi Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-rose-800">
+                            <tr>
+                                <td class="py-6 px-2 font-bold text-rose-100">1. Olah Vokal & Senam Muka</td>
+                                <td class="py-6 px-2 opacity-90 leading-relaxed">Lakukan A-I-U-E-O lebar (3 jari). Tongue Twister: Ucapkan "Satu biru, dua biru..." sampai sepuluh biru dengan cepat tanpa salah.</td>
+                            </tr>
+                            <tr>
+                                <td class="py-6 px-2 font-bold text-rose-100">2. The 1-Minute Speech</td>
+                                <td class="py-6 px-2 opacity-90 leading-relaxed">Pilih satu hobi atau film favorit. Berceritalah di depan kelas/kamera selama tepat 60 detik tanpa melihat teks sama sekali.</td>
+                            </tr>
+                            <tr>
+                                <td class="py-6 px-2 font-bold text-rose-100">3. News Writing & Reading</td>
+                                <td class="py-6 px-2 opacity-90 leading-relaxed">Buat naskah berita sekolah durasi 45 detik (Format 2 Kolom). Terapkan Smiling Voice dan Eye Contact ke lensa kamera saat membaca.</td>
+                            </tr>
+                            <tr>
+                                <td class="py-6 px-2 font-bold text-rose-100">4. Elevator Pitch</td>
+                                <td class="py-6 px-2 opacity-90 leading-relaxed">Berlatih memperkenalkan diri secara profesional dalam 30 detik seolah sedang audisi menjadi presenter TV nasional.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-
-        <div id="tab4" class="tab-content bg-white p-8 rounded-2xl shadow-xl border-t-8 border-red-600">
-            <h2 class="text-2xl font-bold text-red-800 mb-6 underline">IV. JENIS BERITA & TUGAS MANDIRI</h2>
-            <div class="grid md:grid-cols-2 gap-4 mb-8">
-                <div class="border p-4 rounded-lg"><strong>Hard News:</strong> Mendesak, cepat basi, struktur Piramida Terbalik.</div>
-                <div class="border p-4 rounded-lg"><strong>Soft News:</strong> Ringan, menghibur, inspiratif (Profil tokoh/Tips).</div>
-                <div class="border p-4 rounded-lg"><strong>Investigasi:</strong> Mendalam, mengungkap fakta tersembunyi.</div>
-                <div class="border p-4 rounded-lg"><strong>Feature:</strong> Mengutamakan Storytelling & Emosi.</div>
-            </div>
-
-            <h3 class="text-xl font-bold mb-4 bg-gray-800 text-white p-3 rounded">LEMBAR KERJA SISWA (LKS)</h3>
-            <table class="w-full border text-sm">
-                <tr class="bg-gray-100"><th class="p-3 border">Aktivitas</th><th class="p-3 border">Detail Instruksi</th></tr>
-                <tr><td class="p-3 border font-bold">Olah Vokal</td><td class="p-3 border">Senam muka A-I-U-E-O + Tongue Twister "Satu Biru Dua Biru" (1 menit).</td></tr>
-                <tr><td class="p-3 border font-bold">News Reading</td><td class="p-3 border">Baca naskah berita di atas dengan durasi 30-45 detik tepat.</td></tr>
-                <tr><td class="p-3 border font-bold">Writing Task</td><td class="p-3 border">Buat 1 naskah berita sekolah (Hard News) dengan format 2 kolom (Visual-Audio).</td></tr>
-                <tr><td class="p-3 border font-bold">Elevator Pitch</td><td class="p-3 border">Perkenalkan diri (biodata & hobi) di depan kamera dalam 30 detik.</td></tr>
-            </table>
-        </div>
+        </section>
 
     </main>
 
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
+    <footer class="bg-slate-900 text-white py-16 px-6 text-center border-t-8 border-blue-600">
+        <p class="text-blue-400 font-bold uppercase tracking-widest mb-4">Modul Digital SMK Broadcasting</p>
+        <p class="max-w-xl mx-auto opacity-60 text-sm font-light leading-relaxed mb-8">
+            "Broadcaster profesional lebih baik terlihat konyol saat pemanasan daripada terdengar konyol saat siaran karena salah ucap."
+        </p>
+        <div class="flex justify-center gap-6 text-slate-500">
+            <i class="fab fa-youtube text-2xl"></i>
+            <i class="fab fa-instagram text-2xl"></i>
+            <i class="fas fa-camera-retro text-2xl"></i>
+        </div>
+        <p class="mt-12 text-xs opacity-40">&copy; 2026 SMK Negeri (Broadcasting & Perfilman). All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
